@@ -23,15 +23,19 @@ Algoritmos-de-cifrado
 ├── src/
 │   ├── aes_cipher/
 │   │   ├── aes_cipher.py
+│   │   ├── README.md
 │   │   └── __init__.py     
 │   ├── aes_cipher_2/
 │   │   ├── aes_cipher_2.py
+│   │   ├── README.md
 │   │   └── __init__.py     
 │   ├── affin_cipher/
 │   │   ├── affin_cipher.py
+│   │   ├── README.md
 │   │   └── __init__.py     
 │   ├── block_cipher/
 │   │   ├── block_cipher.py
+│   │   ├── README.md
 │   │   ├── tests.py
 │   │   └── __init__.py     
 │   ├── config/
@@ -42,11 +46,14 @@ Algoritmos-de-cifrado
 │   │   └── __init__.py     
 │   ├── hill_cipher/
 │   │   ├── hill_cipher.py
+│   │   ├── README.md
 │   │   └── __init__.py     
 │   ├── permutation_cipher/
 │   │   ├── permutation_cipher.py
+│   │   ├── README.md
 │   │   └── __init__.py     
 │   ├── shift_cipher/
+│   │   ├── README.md
 │   │   ├── shift_cipher.py
 │   │   └── __init__.py     
 │   ├── utils/
