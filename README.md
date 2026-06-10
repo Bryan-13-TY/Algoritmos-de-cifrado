@@ -12,35 +12,35 @@ Algoritmos-de-cifrado
 │   ├── _lab03_introcrypto_20260305.pdf
 │   └── _lab04_introcrypto_20260312.pdf
 ├── src/
-│   ├── aes_cipher
+│   ├── aes_cipher/
 │   │   ├── aes_cipher.py
 │   │   └── __init__.py     
-│   ├── aes_cipher_2
+│   ├── aes_cipher_2/
 │   │   ├── aes_cipher_2.py
 │   │   └── __init__.py     
-│   ├── affin_cipher
+│   ├── affin_cipher/
 │   │   ├── affin_cipher.py
 │   │   └── __init__.py     
-│   ├── block_cipher
+│   ├── block_cipher/
 │   │   ├── block_cipher.py
 │   │   ├── tests.py
 │   │   └── __init__.py     
-│   ├── config
+│   ├── config/
 │   │   ├── config.py
 │   │   └── __init__.py     
-│   ├── decorators
+│   ├── decorators/
 │   │   ├── decorators.py
 │   │   └── __init__.py     
-│   ├── hill_cipher
+│   ├── hill_cipher/
 │   │   ├── hill_cipher.py
 │   │   └── __init__.py     
-│   ├── permutation_cipher
+│   ├── permutation_cipher/
 │   │   ├── permutation_cipher.py
 │   │   └── __init__.py     
-│   ├── shift_cipher
+│   ├── shift_cipher/
 │   │   ├── shift_cipher.py
 │   │   └── __init__.py     
-│   ├── utils
+│   ├── utils/
 │   │   ├── colors.py
 │   │   ├── utils.py
 │   │   └── __init__.py
