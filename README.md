@@ -1,6 +1,14 @@
 # Algoritmos-de-cifrado
 Algoritmos de cifrado desarrollados durante el periodo 2026/2 para la optativa de Introduction to Cryptography de la Escuela Superior de Cómputo (ESCOM-IPN) con la profesora Díaz Santiago Sandra.
 
+## Algoritmos implementados
+- AES cipher
+- Affin cipher
+- DES cipher
+- Hill cipher
+- Permutation cipher
+- Shift cipher
+
 ## 📁 Estructura del proyecto
 ```
 Algoritmos-de-cifrado
