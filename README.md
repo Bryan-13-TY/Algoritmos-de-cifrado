@@ -64,7 +64,7 @@ Algoritmos-de-cifrado
 ```
 mingw32-make install
 ```
-- Correr el programa
+- Correr el programa (se crea la carpeta `/data` y dentro los archivos `plaintext.txt` y `ciphertext.txt`)
 ```
 mingw32-make run
 ```
