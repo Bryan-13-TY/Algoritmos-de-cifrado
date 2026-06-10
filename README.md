@@ -50,3 +50,21 @@ Algoritmos-de-cifrado
 ├── README.md
 └── requirements.txt                
 ```
+
+## 🚀 Uso del proyecto
+- Descargar dependencias
+```
+mingw32-make install
+```
+- Correr el programa
+```
+mingw32-make run
+```
+- Generar archivo `requirements.txt`
+```
+mingw32-make freeze
+```
+- Guardar estructura del programa
+```
+mingw32-make tree
+```
