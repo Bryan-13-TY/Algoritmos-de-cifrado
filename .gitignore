@@ -207,14 +207,3 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
-
-# I/O files
-*.txt
-*.key
-*.png
-*.jpg
-*.jpeg
-*.pdf
-*.enc
-*.zip
-*.exe
