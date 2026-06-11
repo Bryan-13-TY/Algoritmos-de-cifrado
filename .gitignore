@@ -210,3 +210,4 @@ __marimo__/
 
 # I/O files
 *.key
+data/
