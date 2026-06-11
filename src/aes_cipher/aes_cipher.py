@@ -171,7 +171,7 @@ def aes_cipher_menu() -> None:
             case "1":
                 try:
                     key_size = int(input("\nEscribe el tamaño de la llave (16, 24 o 32 bytes): "))
-                except Exception:
+                except ValueError:
                     print(
                         f"\n{yellow('>>')} {error('ERROR')}"
                         ": Debe ser un número"
@@ -203,7 +203,7 @@ def aes_cipher_menu() -> None:
 
 
 def main() -> None:
-    pass
+    aes_cipher_menu()
 
 if __name__ == "__main__":
     main()
