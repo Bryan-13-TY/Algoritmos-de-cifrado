@@ -25,30 +25,30 @@ Algoritmos-de-cifrado
 │   ├── aes_cipher/
 │   │   ├── aes_cipher.py
 │   │   ├── README.md
-│   │   └── __init__.py     
+│   │   └── __init__.py
 │   ├── aes_cipher_2/
 │   │   ├── aes_cipher_2.py
 │   │   ├── README.md
-│   │   └── __init__.py     
+│   │   └── __init__.py
 │   ├── affin_cipher/
 │   │   ├── affin_cipher.py
 │   │   ├── README.md
-│   │   └── __init__.py     
+│   │   └── __init__.py
 │   ├── block_cipher/
 │   │   ├── block_cipher.py
 │   │   ├── README.md
 │   │   ├── tests.py
-│   │   └── __init__.py     
+│   │   └── __init__.py
 │   ├── config/
 │   │   ├── config.py
-│   │   └── __init__.py     
+│   │   └── __init__.py
 │   ├── decorators/
 │   │   ├── decorators.py
-│   │   └── __init__.py     
+│   │   └── __init__.py
 │   ├── hill_cipher/
 │   │   ├── hill_cipher.py
 │   │   ├── README.md
-│   │   └── __init__.py     
+│   │   └── __init__.py
 │   ├── permutation_cipher/
 │   │   ├── permutation_cipher.py
 │   │   ├── README.md
@@ -60,7 +60,7 @@ Algoritmos-de-cifrado
 │   ├── shift_cipher/
 │   │   ├── README.md
 │   │   ├── shift_cipher.py
-│   │   └── __init__.py     
+│   │   └── __init__.py
 │   ├── utils/
 │   │   ├── colors.py
 │   │   ├── utils.py
@@ -69,7 +69,7 @@ Algoritmos-de-cifrado
 ├── .gitignore
 ├── Makefile
 ├── README.md
-└── requirements.txt                
+└── requirements.txt
 ```
 
 ## 🚀 Uso del proyecto
