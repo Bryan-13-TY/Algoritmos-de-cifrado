@@ -26,6 +26,7 @@ __all__ = ["aes_cipher_menu"]
 CHUNK_SIZE = 1024 * 1024  # 1 MB
 
 def _is_valid_key(key_filename: str) -> bool:
+    """Verifica que la llave este codificada en Base64."""
     with open(BASE_DIR / key_filename, "r", encoding="utf-8") as f:
         data = f.read()
     
@@ -37,6 +38,15 @@ def _is_valid_key(key_filename: str) -> bool:
 
 
 def _random_key_generator(key_size: int, key_file: str) -> None:
+    """
+    Genera una llave de 16, 24 o 32 bytes codificada en Base64 y la
+    guarda en un archivo.
+
+    :param key_size: Tamaño de la llave en bytes.
+    :type key_size: int
+    :param key_file: Nombre del archivo en donde se guardará la llave.
+    :type key_file: str
+    """
     if key_size not in (16, 24, 32):
         print(
             f"\n{yellow('>>')} "
@@ -57,6 +67,14 @@ def _random_key_generator(key_size: int, key_file: str) -> None:
 
 
 def _rebuild_key(key_filename: str) -> bytes:
+    """
+    Decodifica la llave en Base64.
+
+    :param key_filename: Archivo con la llave codificada en Base64.
+    :type key_filename: str
+    :return: Llave decodificada en bytes.
+    :rtype: bytes
+    """
     with open(BASE_DIR / key_filename, "r", encoding="utf-8") as f:
         data = f.read()
 
@@ -71,6 +89,17 @@ def _encrypt_file(
     plaintext_filename: str,
     ciphertext_filename: str,
 ) -> None:
+    """
+    Cifra cualquier tipo de archivo de cualquier tanaño por bloques de
+    1 MB y lo guarda con extensión `.enc`.
+
+    :param key_filename: Archivo con la llave.
+    :type key_filename: str
+    :param plaintext_filename: Archivo a cifrar.
+    :type plaintext_filename: str
+    :param ciphertext_filename: Archivo cifrado.
+    :type ciphertext_filename: str
+    """
     key = _rebuild_key(key_filename)
     suffix = Path(plaintext_filename).suffix
     input_file = BASE_DIR / plaintext_filename
@@ -115,6 +144,14 @@ def _decrypt_file(
     key_filename: str,
     ciphertext_filename: str,
 ) -> None:
+    """
+    Descifra un archivo por bloques de 1 MB.
+
+    :param key_filename: Archivo con la llave.
+    :type key_filename: str
+    :param ciphertext_filename: Archivo cifrado.
+    :type ciphertext_filename: str
+    """
     key = _rebuild_key(key_filename)
     input_file = BASE_DIR / ciphertext_filename
     recover_filename = ciphertext_filename.removesuffix(".enc")
