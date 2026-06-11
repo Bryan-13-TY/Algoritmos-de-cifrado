@@ -169,7 +169,7 @@ def rsa_cipher_menu() -> None:
                 print(f"e = {e}")
                 print(f"n = {n}")
 
-                print(f"\n{yellow('>>')} Llave privada")
+                print(f"\n{yellow('>>')} Exponente privado")
                 print(f"d = {d}")
                 _store_keypair(public_key, d)
                 wait_key()
