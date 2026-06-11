@@ -33,6 +33,15 @@ def get_primes() -> None:
 
 
 def _primes_generator(bits: int) -> tuple[int, int]:
+    """
+    Genera dos números primos aleatorios `p` y `q` distintos de
+    `bits` tamaño.
+
+    :param bits: Tamaño de los números primos.
+    :type bits: int
+    :return: Números primos `p` y `q`.
+    :rtype: tuple[int, int]
+    """
     p = getPrime(bits)
 
     while True:
@@ -65,7 +74,15 @@ def _random_keypair_generator(bits: int) -> tuple[tuple[int, int], int]:
 
 
 def _store_keypair(public_key: tuple[int, int], d: int) -> None:
-    with open(BASE_DIR / "key.key", "w", encoding="utf-8") as f:
+    """
+    Almacena la llave pública y la llave privada en un archivo.
+
+    :param public_key: Llave pública (e, n).
+    :type public_key: tuple[int, int]
+    :param d: Llave privada.
+    :type d: int
+    """
+    with open(BASE_DIR / "keys.key", "w", encoding="utf-8") as f:
         e, n = public_key
         f.write(f"e={e}\n")
         f.write(f"d={d}\n")
@@ -73,11 +90,19 @@ def _store_keypair(public_key: tuple[int, int], d: int) -> None:
 
     print(
         f"\n{yellow('>>')} "
-        f"{success('Llave pública y privada guardadas correctamente como key.key')}"
+        f"{success('Llave pública y privada guardadas correctamente como keys.key')}"
     )
 
 
 def _encrypt(e: int, n: int) -> None:
+    """
+    Cifra un valor aleatorio de 16 bits.
+
+    :param e: Exponente público.
+    :type e: int
+    :param n: Módulo.
+    :type n: int
+    """
     r = randbits(15) | (1 << 15)
 
     c = pow(r, e, n)
@@ -87,6 +112,16 @@ def _encrypt(e: int, n: int) -> None:
 
 
 def _decrypt(d: int, n: int, c: int) -> None:
+    """
+    Descifra `c`.    
+
+    :param d: Exponente privado.
+    :type d: int
+    :param n: Módulo.
+    :type n: int
+    :param c: Ciphertext.
+    :type c: int
+    """
     m = pow(c, d, n)
 
     print(f"\nValor recuperado: {m}")
@@ -118,6 +153,13 @@ def rsa_cipher_menu() -> None:
                         ": Debe ser un número"
                     )
                     wait_key()
+                    continue
+
+                if bits not in BIT_SIZES:
+                    print(
+                        f"{yellow('>>')} {error('ERROR')}"
+                        ": Solo se aceptan 32, 512 o 2048 bits"
+                    )
                     continue
 
                 public_key, d = _random_keypair_generator(bits)
