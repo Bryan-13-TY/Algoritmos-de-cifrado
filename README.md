@@ -9,6 +9,7 @@ Algoritmos de cifrado desarrollados durante el periodo 2026/2 para la optativa d
 - [Hill cipher](src/hill_cipher/)
 - [Permutation cipher](src/permutation_cipher/)
 - [Shift cipher](src/shift_cipher/)
+- [RSA cipher](src/rsa_cipher/)
 
 ## 📁 Estructura del proyecto
 ```
